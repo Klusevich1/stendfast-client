@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
           } border-t-[1px] flex items-center justify-between translate-y-0`}
         >
           <div className="services-dropdown max-w-[1200px] mx-auto w-full flex items-center justify-between ">
-            <FooterLogo />
+            <HeaderLogo />
             <nav className="hidden xlg:flex space-x-8 items-center">
               <SmoothScrollLink
                 href="#services"
