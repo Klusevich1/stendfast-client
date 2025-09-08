@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FooterLogo: React.FC = () => {
   return (
-    <a className="text-xl flex items-center text-white h-fit" href="#">
+    <a className="text-xl flex items-center text-white h-fit" href="/">
       <Image
         src="/StendfastFooter.svg"
         width={140}
