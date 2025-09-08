@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://stendfast.by/
+
+# Sitemaps
+Sitemap: https://stendfast.by/sitemap.xml

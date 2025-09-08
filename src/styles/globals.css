@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+}
+
+[prefers-color-scheme="dark"] {
+  --background: #171717;
+  --foreground: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2, 
+h3, 
+p,
+span {
+  line-height: normal;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    --background: #171717;
+    --foreground: #fafafa;
+  }
+} */
+
+.custom_container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .custom_container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom_container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .custom_container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .tilda-slider .custom_container {
+    padding-left: 60px;
+    padding-right: 0 !important;
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #fafafa;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox.color-black + label::before {
+  border: 1px solid #171717;
+}
+
+.custom-checkbox:checked + label::before {
+  background-image: url("/checked.svg");
+}
+
+.custom-checkbox.color-black:checked + label::before {
+  background-image: url("/checked-black.svg");
+}
