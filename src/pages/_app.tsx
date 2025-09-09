@@ -44,7 +44,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="apple-mobile-web-app-title" content="MyWebSite" />
       </Head>
       <Component {...pageProps} />
-      <CookieModal />
     </>
   );
 }

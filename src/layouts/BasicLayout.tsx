@@ -11,7 +11,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = ({ children }) => {
     <>
       <noscript>
         <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-NLZBTPDJ"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TXTZSH97"
           height="0"
           width="0"
           style={{ display: "none", visibility: "hidden" }}
