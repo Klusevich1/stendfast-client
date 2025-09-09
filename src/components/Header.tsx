@@ -3,7 +3,6 @@ import Image from "next/image";
 import HeaderLogo from "@/components/HeaderLogo";
 import { useRouter } from "next/router";
 import SmoothScrollLink from "./SmoothScollLink";
-import FooterLogo from "./FooterLogo";
 
 interface HeaderProps {
   theme?: string;
@@ -17,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
   );
 
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []); 
+  useEffect(() => setMounted(true), []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -71,8 +70,13 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
           } border-t-[1px] flex items-center justify-between translate-y-0`}
         >
           <div className="services-dropdown max-w-[1200px] mx-auto w-full flex items-center justify-between ">
-            <FooterLogo />
-            <nav className="hidden xlg:flex space-x-8 items-center">
+            <div className="flex flex-row items-center gap-3">
+              <HeaderLogo />
+              <p className="xlg:block hidden text-[14px] font-medium">
+                Минск, ул. Тиражная, 150
+              </p>
+            </div>
+            <nav className="hidden xlg:flex space-x-6 items-center">
               <SmoothScrollLink
                 href="#services"
                 className={`${
@@ -97,13 +101,29 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
               >
                 Портфолио
               </SmoothScrollLink>
+              <SmoothScrollLink
+                href="#quiz"
+                className={`${
+                  theme === "dark" ? "text-white" : "text-dark"
+                } font-medium transition-all duration-300 hover:text-blue-600`}
+              >
+                Контакты
+              </SmoothScrollLink>
             </nav>
-            <SmoothScrollLink
-              href="#quiz"
-              className="hidden xlg:block bg-blue_main min-h-[50px] py-3 text-center rounded-full max-w-[204px] text-white px-[36px] w-full text-[16px]  hover:bg-blue-700"
-            >
-              Обсудить проект
-            </SmoothScrollLink>
+            <div className="flex flex-row items-center gap-3">
+              <a
+                className="xlg:block hidden flex-none text-[14px] font-medium"
+                href="tel:+375259373528"
+              >
+                +375 25 937 35 28
+              </a>
+              <SmoothScrollLink
+                href="#quiz"
+                className="hidden xlg:block bg-blue_main min-h-[50px] py-3 text-center rounded-full max-w-[204px] text-white px-[36px] w-full text-[16px]  hover:bg-blue-700"
+              >
+                Обсудить проект
+              </SmoothScrollLink>
+            </div>
           </div>
           <button
             className={`xlg:hidden flex-col items-end flex ${
@@ -183,7 +203,7 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
                 ></span>
               </button>
             </div>
-            <nav className="flex md:mx-[46px] px-[20px] flex-col items-start space-y-[15px] mt-8 mb-[30px]">
+            <nav className="flex md:mx-[46px] mx-[20px] flex-col items-start space-y-[15px] mt-8 mb-[30px]">
               <div
                 className={`duration-500 flex flex-col items-start space-y-[15px] ${
                   isMobileServicesOpen ? "opacity-0" : "opacity-100"
@@ -221,6 +241,17 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
             >
               <span onClick={toggleMenu}>Обсудить проект</span>
             </SmoothScrollLink>
+            <div className="flex md:mx-[46px] mx-[20px] flex-col gap-3 mt-5">
+              <a
+                className="block xlg:hidden flex-none text-[18px] font-medium"
+                href="tel:+375259373528"
+              >
+                +375 25 937 35 28
+              </a>
+              <p className="block xlg:hidden flex-none text-[18px] font-medium">
+                Минск, ул. Тиражная, 150
+              </p>
+            </div>
           </div>
         </div>
       </header>
