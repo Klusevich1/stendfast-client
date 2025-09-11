@@ -119,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
               </a>
               <SmoothScrollLink
                 href="#quiz"
-                className="hidden xlg:block bg-blue_main min-h-[50px] py-3 text-center rounded-full max-w-[204px] text-white px-[36px] w-full text-[16px]  hover:bg-blue-700"
+                className="hidden xlg:block bg-blue_main min-h-[50px] py-3 text-center rounded-full max-w-[204px] text-white px-[36px] w-full text-[16px]  hover:bg-blue_90"
               >
                 Обсудить проект
               </SmoothScrollLink>

@@ -274,8 +274,8 @@ const QuizBlock: React.FC<QuizBlockProps> = ({
                                 name={`quiz-${activeQuestion}`}
                                 className={
                                   isCheckbox
-                                    ? "appearance-none rounded-[4px] border border-gray-400 checked:border-[5px] checked:border-black transition-all duration-100 cursor-pointer w-4 h-4"
-                                    : "appearance-none rounded-full border border-gray-400 checked:border-[5px] checked:border-black transition-all duration-100 cursor-pointer w-4 h-4"
+                                    ? "appearance-none rounded-[4px] border border-gray-400 checked:border-[5px] checked:border-black transition-all duration-100 cursor-pointer min-w-[16px] w-4 h-4"
+                                    : "appearance-none rounded-full border border-gray-400 checked:border-[5px] checked:border-black transition-all duration-100 cursor-pointer min-w-[16px] w-4 h-4"
                                 }
                                 checked={isSelected}
                                 onChange={() => handleAnswer(option)}
